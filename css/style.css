@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    margin: 0;
+    color: #fff;
+}
+header {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header img {
+    width: 120px;
+}
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav a:hover {
+    color: #ff3c00;
+}
+.hero, .contact-form {
+    padding: 40px;
+    text-align: center;
+}
+.filter-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+.filter-buttons button {
+    background: #1e1e1e;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+.filter-buttons button:hover {
+    background: #ff3c00;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+.video-item {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(255,60,0,0.7);
+}
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+.caption {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+}
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+form button {
+    background: #ff3c00;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+form button:hover {
+    background: #e63600;
+}

@@ -3,21 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> SKYACE FPV | Filmación Aérea Profesional</title>
+  <title>SKYACE FPV | Filmación Aérea Profesional</title>
 
   <!-- Fonts y Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<style>
-  .marco-dorado {
-    border: 2px solid gold;
-    padding: 4px;
-    border-radius: 6px;
-    background-color: white;
-    box-shadow: 0 0 8px rgba(218, 165, 32, 0.4);
-  }
-</style>
 
   <style>
     body {
@@ -42,6 +33,13 @@
     .bg-overlay {
       background-color: rgba(0, 0, 0, 0.75);
     }
+    .marco-dorado {
+      border: 2px solid gold;
+      padding: 4px;
+      border-radius: 6px;
+      background-color: white;
+      box-shadow: 0 0 8px rgba(218, 165, 32, 0.4);
+    }
   </style>
 </head>
 <body class="bg-overlay">
@@ -59,77 +57,31 @@
 <section class="h-screen flex items-center justify-center text-center px-4">
   <div data-aos="fade-up">
     <h2 class="text-5xl mb-4">FILMACION AÉREA PROFESIONAL</h2>
-    <p class="text-xl mb-6">Tanto drones FPV como Estabilizados.Grabacion en 4k a 120 FPS</p>
+    <p class="text-xl mb-6">Tanto drones FPV como Estabilizados. Grabación en 4k a 120 FPS</p>
     <a href="#contacto" class="bg-gold text-black px-6 py-3 rounded font-semibold hover-gold">Conócenos</a>
   </div>
-  <section class="py-12 px-6 flex justify-center" data-aos="fade-up">
+</section>
+
+<!-- Galería con imágenes y marcos dorados -->
+<section class="py-12 px-6 flex justify-center" data-aos="fade-up">
   <div class="flex flex-wrap justify-center gap-6">
-    <div class="marco-dorado">
+    <div class="marco-dorado cursor-pointer" onclick="abrirModal('moto.png')">
       <img src="moto.png" alt="Imagen 1" class="w-40 rounded">
     </div>
-    <div class="marco-dorado">
+    <div class="marco-dorado cursor-pointer" onclick="abrirModal('playa.png')">
       <img src="playa.png" alt="Imagen 2" class="w-40 rounded">
     </div>
-    <div class="marco-dorado">
+    <div class="marco-dorado cursor-pointer" onclick="abrirModal('montana.png')">
       <img src="montana.png" alt="Imagen 3" class="w-40 rounded">
     </div>
   </div>
 </section>
 
-</section>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Galería con Marcos Dorados</title>
-  <style>
-    body {
-      background-color: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .galeria {
-      display: flex;
-      gap: 20px;
-    }
-
-    .marco-dorado {
-      border: 3px solid gold;
-      padding: 3px;
-      border-radius: 6px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
-    }
-
-    .marco-dorado img {
-      width: 150px;
-      height: auto;
-      border-radius: 4px;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="galeria">
-    <div class="marco-dorado">
-      <img src="moto.png" alt="Imagen 1">
-    </div>
-    <div class="marco-dorado">
-      <img src="playa.png" alt="Imagen 2">
-    </div>
-    <div class="marco-dorado">
-      <img src="montana.png" alt="Imagen 3">
-    </div>
-  </div>
-
-</body>
-</html>
-
+<!-- Modal para imagen ampliada -->
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <span class="absolute top-5 right-5 text-white text-4xl cursor-pointer" onclick="cerrarModal()">&times;</span>
+  <img id="imagen-modal" src="" alt="Imagen ampliada" class="max-w-full max-h-full rounded-lg shadow-lg border-4 border-gold">
+</div>
 
 <section id="quienes" class="py-20 text-center px-6 max-w-4xl mx-auto bg-black bg-opacity-70 rounded" data-aos="fade-up">
   <h3 class="text-4xl mb-6">¿Quiénes Somos?</h3>
@@ -140,7 +92,7 @@
   <h3 class="text-4xl mb-10">Servicios</h3>
   <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
     <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="fade-up">
-      <h4 class="text-2xl mb-2">🎬 Producción audiovisual aérea</h4>
+      <h4 class="text-2xl mb-2">🎮 Producción audiovisual aérea</h4>
       <p>Videoclips, publicidad, eventos, reels y vídeos corporativos</p>
       <p class="highlight mt-2">Desde 300 €</p>
     </div>
@@ -150,7 +102,7 @@
       <p class="highlight mt-2">Desde 150 €</p>
     </div>
     <div class="bg-gray-900 p-6 rounded border border-yellow-600" data-aos="fade-up" data-aos-delay="200">
-      <h4 class="text-2xl mb-2">🛠 Inspecciones técnicas</h4>
+      <h4 class="text-2xl mb-2">👷 Inspecciones técnicas</h4>
       <p>Control visual de estructuras, obras, tejados y más</p>
       <p class="highlight mt-2">Desde 150 €</p>
     </div>
@@ -192,6 +144,19 @@
 <!-- AOS Animation Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
+
+<!-- Modal JS -->
+<script>
+  function abrirModal(src) {
+    document.getElementById('imagen-modal').src = src;
+    document.getElementById('modal').classList.remove('hidden');
+  }
+
+  function cerrarModal() {
+    document.getElementById('modal').classList.add('hidden');
+    document.getElementById('imagen-modal').src = '';
+  }
+</script>
 
 </body>
 </html>

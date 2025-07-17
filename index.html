@@ -58,33 +58,55 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Imagen con Marco Dorado</title>
+  <title>Galería con Marcos Dorados</title>
   <style>
+    body {
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .galeria {
+      display: flex;
+      gap: 20px;
+    }
+
     .marco-dorado {
-      display: inline-block;
-      padding: 10px;
-      border: 8px solid gold;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(218, 165, 32, 0.8);
-      background-color: #fff8dc;
+      border: 3px solid gold;
+      padding: 3px;
+      border-radius: 6px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
     }
 
     .marco-dorado img {
-      display: block;
-      max-width: 100%;
+      width: 150px;
       height: auto;
-      border-radius: 8px;
+      border-radius: 4px;
+      display: block;
     }
   </style>
 </head>
 <body>
 
-  <div class="marco-dorado">
-    <img src="moto.png" alt="Mi imagen con marco dorado">
+  <div class="galeria">
+    <div class="marco-dorado">
+      <img src="moto.png" alt="Imagen 1">
+    </div>
+    <div class="marco-dorado">
+      <img src="playa.png" alt="Imagen 2">
+    </div>
+    <div class="marco-dorado">
+      <img src="montana.png" alt="Imagen 3">
+    </div>
   </div>
 
 </body>
 </html>
+
 
 <section id="quienes" class="py-20 text-center px-6 max-w-4xl mx-auto bg-black bg-opacity-70 rounded" data-aos="fade-up">
   <h3 class="text-4xl mb-6">¿Quiénes Somos?</h3>
